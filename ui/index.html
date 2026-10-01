@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Mehfooz — the 30-day clock that doesn't stop</title>
+  <meta name="description" content="Statutory case-accountability for the Protection Against Harassment of Women at the Workplace Act 2010." />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#F5F6F8" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0B0D11" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232D3AAE'/%3E%3Cpath d='M16 6.5 9.6 9.2v4.9c0 4 2.7 7 6.4 7.9 3.7-.9 6.4-3.9 6.4-7.9V9.2z' fill='none' stroke='%23fff' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M16 11v3.6l2.2 1.4' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+  <!-- Resolve theme + still-mode BEFORE first paint (no flash). Priority: ?theme= → saved → OS. -->
+  <script>
+    (function () {
+      var r = document.documentElement, p = new URLSearchParams(location.search), t = p.get("theme");
+      if (t !== "light" && t !== "dark") {
+        try { t = localStorage.getItem("mehfooz.theme"); } catch (e) { t = null; }
+      }
+      if (t !== "light" && t !== "dark") {
+        t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      r.setAttribute("data-theme", t);
+      if (p.get("still") === "1") r.classList.add("still");
+    })();
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="root">
+    <noscript><div class="boot"><b>Mehfooz needs JavaScript.</b> Enable it to file or track a case.</div></noscript>
+  </div>
+
+  <!-- Local vendor files only — no CDN, works with the venue wifi down. -->
+  <script src="vendor/react.production.min.js"></script>
+  <script src="vendor/react-dom.production.min.js"></script>
+  <script src="vendor/htm.umd.js"></script>
+  <script>
+    if (!window.React || !window.ReactDOM || !window.htm) {
+      document.getElementById("root").innerHTML =
+        '<div class="boot"><b>Could not load the local vendor files.</b><br>' +
+        'Expected <code>vendor/react.production.min.js</code>, <code>vendor/react-dom.production.min.js</code> ' +
+        'and <code>vendor/htm.umd.js</code> next to index.html.</div>';
+    }
+  </script>
+  <script src="orgs.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
