@@ -112,7 +112,7 @@ an AI agent set all of that up.
 | Member | |
 |---|---|
 | **Abdul Raheem** | [@raheemxghumman](https://github.com/raheemxghumman) |
-| **Wania Rahman** | |
+| **Wania Rahman** | [@femme20](https://github.com/femme20) |
 
 ---
 
