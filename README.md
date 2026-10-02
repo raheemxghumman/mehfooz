@@ -510,5 +510,6 @@ We would rather you hear these from us.
 **404 Team Not Found** &nbsp;·&nbsp; Abdul Raheem &nbsp;·&nbsp; Wania Rahman
 
 *A law with a deadline finally has a clock.*
+copyrights ©️ - Abdul Raheem , Wania.
 
 </div>
